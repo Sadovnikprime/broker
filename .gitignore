@@ -1,0 +1,19 @@
+# Binaries
+bin/
+*.exe
+
+# Data and logs
+data/
+logs/
+
+# Go
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
