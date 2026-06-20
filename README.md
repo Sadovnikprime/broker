@@ -26,24 +26,9 @@ docker compose run --rm broker /app/subscriber -manager http://manager:8080 -top
 docker compose down
 ```
 
-**Без Docker** — в отдельных терминалах:
-
-```bash
-go run ./cmd/manager -addr :8080 -state ./data/manager
-go run ./cmd/broker  -addr :8081 -data ./data/broker -manager http://localhost:8080
-go run ./cmd/publisher  -broker http://localhost:8081 -topic demo -count 5
-go run ./cmd/subscriber -manager http://localhost:8080 -topic demo -group g1 -id w1 -once
-```
-
-**Порт 8080 занят:**
-```bash
-docker compose down
-netstat -ano | findstr :8080
-```
-
 ---
 
-## Консоль — только curl
+## Консоль 
 
 ```bash
 # статус системы
